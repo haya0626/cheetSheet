@@ -35,8 +35,7 @@ git revert -e 3ad2a09
 
 ターミナルに以下のような文が出るので、必要なら手動で修正する
 
-```
-powershell
+```powershell
 	Revert "Fix: update payment logic"
 		
 	Reason:

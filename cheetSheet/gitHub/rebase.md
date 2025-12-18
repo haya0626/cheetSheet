@@ -28,7 +28,7 @@
 
 自分の featureが古いとき → 自分の変更が main の後ろにきれいに並ぶ
 
-```markdown
+```powershell
 git checkout feature
 git fetch origin
 git rebase origin/main
@@ -38,7 +38,7 @@ git rebase origin/main
 
 直近の5コミットを編集するケース
 
-```markdown
+```powershell
 git rebase -i HEAD~5
 ```
 
@@ -46,7 +46,7 @@ git rebase -i HEAD~5
 
 エディタが開き、こう表示される
 
-```markdown
+```powershell
 pick abc123   add user model
 pick dce456   fix typo
 pick ef7890   debug
@@ -64,13 +64,13 @@ pick ef7890   debug
 
 ③ rebase中にやっぱやめたい
 
-```markdown
+```powershell
 git rebase --abort
 ```
 
 編集が完了して反映させたい場合
 
-```markdown
+```powershell
 git push --force-with-lease
 ```
 

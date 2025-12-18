@@ -2,15 +2,15 @@
 
 ### stashをコメント付きで保存したい
 
-```
-git stash push -m "メッセージ
+```	powershell
+git stash push -m "メッセージ"
 ```
 
 ---
 
 ### 過去のstashしたリストが見たい
 
-```
+```	powershell
 git stash list
 ```
 
@@ -18,7 +18,7 @@ git stash list
 
 ### stashを適応させたい（最新のもの）
 
-```
+``` powershell
 git stash apply
 ```
 
@@ -26,7 +26,7 @@ git stash apply
 
 ### stashの削除
 
-```
+```	powershell
 git stash clear
 ```
 
@@ -36,7 +36,7 @@ git stash clear
 
 1.git stash listで過去ログの確認
 
-```
+``` powershell
 stash@{0}: WIP on main: abc1234 修正1
 stash@{1}: WIP on dev: def5678 作業途中2
 stash@{2}: WIP on feature: ghi9012 テスト追加
