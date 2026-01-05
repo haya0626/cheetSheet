@@ -1,12 +1,13 @@
-# onとhandleの使い分け（イベントハンドラ）
+# on vs handle
 
-| 名前            | 役割                               | 使う場所                      |
-|-----------------|------------------------------------|-------------------------------|
-| **`onXxx`**     | **「イベントが起きた」ことを表す** | **props / イベントの入口**     |
-| **`handleXxx`** | **イベントを処理する関数**         | **コンポーネント内部の関数**   |
+## on と handle の使い分け（イベントハンドラ）
 
+| 名前            | 役割                               | 使う場所                     |
+| --------------- | ---------------------------------- | ---------------------------- |
+| **`onXxx`**     | **「イベントが起きた」ことを表す** | **props / イベントの入口**   |
+| **`handleXxx`** | **イベントを処理する関数**         | **コンポーネント内部の関数** |
 
-# ① `on~` は「イベントの通知名」
+## ① `on~` は「イベントの通知名」
 
 ### 基本ルール
 
@@ -16,7 +17,7 @@
 
 ```tsx
 function Button({ onClick }) {
-  return <button onClick={onClick}>Click</button>
+  return <button onClick={onClick}>Click</button>;
 }
 ```
 
@@ -24,7 +25,7 @@ function Button({ onClick }) {
 <Button onClick={handleClick} />
 ```
 
-# ② `handle~` は「処理をする関数名」
+## ② `handle~` は「処理をする関数名」
 
 ### 基本ルール
 
@@ -38,9 +39,9 @@ function Form() {
     // バリデーション
     // API呼び出し
     // state更新
-  }
+  };
 
-  return <form onSubmit={handleSubmit} />
+  return <form onSubmit={handleSubmit} />;
 }
 ```
 
@@ -49,14 +50,14 @@ function Form() {
 ```tsx
 function Parent() {
   const handleSave = () => {
-    console.log("保存する")
-  }
+    console.log("保存する");
+  };
 
-  return <Child onSave={handleSave} />
+  return <Child onSave={handleSave} />;
 }
 
 function Child({ onSave }) {
-  return <button onClick={onSave}>Save</button>
+  return <button onClick={onSave}>Save</button>;
 }
 ```
 
@@ -78,7 +79,7 @@ function Child({ onSave }) {
 - 子が「処理を持ってる感」が出る
 - 親の事情が props 名に漏れている
 
-→ Childから見ると
+→ Child から見ると
 
 「これはイベント？処理？どっち？」となる
 
@@ -88,4 +89,3 @@ function Child({ onSave }) {
 - 子：`on~` として受け取る
 - **「on = 合図」「handle = 処理」**
 - 迷ったら props は `on~`
-
