@@ -6,7 +6,7 @@
 
 ### サンプル
 
-```tsx
+```TypeScript
 type User = {
   id: number;
   name: string;
@@ -16,13 +16,13 @@ type User = {
 
 id を消したい
 
-```tsx
+```TypeScript
 type UserWithoutId = Omit<User, "id">;
 ```
 
 結果
 
-```tsx
+```TypeScript
 type UserWithoutId = {
   name: string;
   email: string;
@@ -35,7 +35,7 @@ type UserWithoutId = {
 
 <span style="color: yellow;">ユニオンで指定する<span>
 
-```tsx
+```TypeScript
 type User = {
   id: number;
   name: string;
@@ -44,13 +44,13 @@ type User = {
 };
 ```
 
-```tsx
+```TypeScript
 type PublicUser = Omit<User, "email" | "createdAt">;
 ```
 
 結果
 
-```tsx
+```TypeScript
 type PublicUser = {
   id: number;
   name: string;
@@ -59,26 +59,27 @@ type PublicUser = {
 
 ---
 
-### 存在しないキーを Omitできるので対策すること
+### 存在しないキーを Omit できるので対策すること
 
-```tsx
+```TypeScript
 type User = {
   id: number;
   name: string;
 };
 ```
 
-```tsx
+```TypeScript
 type X = Omit<User, "password">;
 ```
 
 **エラーにならない！！**
 
-<span style="color: yellow;">**対策…typeに対象のキーのみ対象となるように型を設定する**<span>
+<span style="color: yellow;">**対策…type に対象のキーのみ対象となるように型を設定する**<span>
 
-```tsx
+```TypeScript
 type StrictOmit<T, K extends keyof T> = Omit<T, K>;
 ```
+
 ```
 type X = StrictOmit<User, "password">; // ❌ エラー
 ```
