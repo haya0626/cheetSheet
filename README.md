@@ -4,14 +4,16 @@
 
 ```text
 .
-├── css/                     # style関連
-|     ├── TailWind/          # TailWind
+├──────── css/               # style関連
+|            ├── css/        # css
+|            ├── TailWind/   # TailWind
 ├── github/                  # github Command
+├──────── test/              # test関連
+|            ├── Jest/       # Jest
 ├── react/                   # react
 ├── TypeScript/              # TypeScript
 |            ├── Utility/    # Utility
 ├── utils/                   # 便利な知識
-|       ├── images/          # utilsで使用する画像
 ├── images/                  # README.mdで使用する画像
 └── README.md                # プロジェクトの概要と説明
 ```
