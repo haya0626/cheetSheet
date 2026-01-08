@@ -11,6 +11,7 @@
 ├──────── test/              # test関連
 |            ├── Jest/       # Jest
 ├── react/                   # react
+├── terms/                   # 用語関連
 ├── TypeScript/              # TypeScript
 |            ├── Utility/    # Utility
 ├── utils/                   # 便利な知識
