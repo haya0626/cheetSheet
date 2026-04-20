@@ -101,28 +101,3 @@
 - footer 締め・補足情報という意味あり
 
 → SEO やアクセシビリティに有利
-
-## よく一緒に使うタグ
-
-```html
-<p>
-  → テキスト
-  <a>
-    → リンク
-    <nav>→ フッター用メニュー <small> → 小さい注釈や著作権</small></nav></a
-  >
-</p>
-```
-
-実用例（よくある Web サイト）
-
-```html
-<footer>
-  <p>© 2026 My Website</p>
-  <nav>
-    <a href="#">About</a>
-    <a href="#">Privacy</a>
-    <a href="#">Contact</a>
-  </nav>
-</footer>
-```
