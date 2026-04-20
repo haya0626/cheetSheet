@@ -114,3 +114,25 @@
   改行されます
 </p>
 ```
+
+## よく使う属性
+
+※p はあまり専用属性を持たないが実務では重要
+
+### ● class
+
+```html
+<p class="text">文章</p>
+```
+
+### ● id
+
+```html
+<p id="description">説明文</p>
+```
+
+### ● style（基本は非推奨）
+
+```html
+<p style="color:red;">文章</p>
+```
