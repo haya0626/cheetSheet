@@ -210,6 +210,15 @@ SameSite=None; Secure
 
 ※Secure 必須（Chrome ルール）
 
+「クロスサイト許可」とは？
+
+> “別サイトから来た通信でも Cookie を送っていいよ”
+> という許可。
+
+「iframe」とは？
+
+> 「別サイトをページ内に埋め込む」仕組み。
+
 ### SameSite 挙動イメージ
 
 | シーン          | Strict | Lax  | None |
