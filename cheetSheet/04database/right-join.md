@@ -232,6 +232,8 @@ departmentsが基準
 社員が所属している部署だけ取得したい
 ```
 
+---
+
 ### RIGHT JOIN
 
 ```text
