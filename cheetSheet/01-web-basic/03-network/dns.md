@@ -7,7 +7,7 @@ DNS（Domain Name System）は、
 ■ 代表例 **Name Resolution** ( IP アドレスを取得する処理
 )
 
-www.example.com ⇒ 93.184.216.34
+`www.example.com` ⇒ 93.184.216.34
 
 他にも以下のような様々な情報を登録できる
 
